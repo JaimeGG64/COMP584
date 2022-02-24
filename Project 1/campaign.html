@@ -90,6 +90,25 @@
                 width: 100% !important;
             }
         }
+
+        /* Interactive Cards */
+        input {
+            display: none;
+        }
+
+        label {
+            cursor: pointer;
+        }
+
+        .slide {
+            display: none;
+        }
+
+        #slide1:checked~.slide1,
+        #slide2:checked~.slide2,
+        #slide3:checked~.slide3 {
+            display: block;
+        }
     </style>
 </head>
 
@@ -258,6 +277,65 @@
                             </table>
                         </td>
                     </tr>
+
+                    <!-- Interactive Cards -->
+                    <tr>
+                        <td align="center" style="padding: 20px">
+                            <input type="radio" name="slides" id="slide1" checked>
+                            <input type="radio" name="slides" id="slide2">
+                            <input type="radio" name="slides" id="slide3">
+
+                            <label for="slide1" class="slide-label"
+                                style="border: 2px solid black; display: inline-block; margin: 10px; padding: 4px 20px;">Dreamcast
+                                PACKAPUNCH</label>
+                            <label for="slide2" class="slide-label"
+                                style="border: 2px solid black; display: inline-block; margin: 10px; padding: 4px 20px;">PS1
+                                Sync on
+                                Luma Cable</label>
+                            <label for="slide3" class="slide-label"
+                                style="border: 2px solid black; display: inline-block; margin: 10px; padding: 4px 20px;">HDMI
+                                to
+                                Mini
+                                HDMI</label>
+
+                            <div class="slide slide1" style="background-color: lightgray; padding: 20px;">
+                                <p style="text-align: left;">
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus tempora
+                                    inventore nam itaque
+                                    esse tenetur excepturi illo alias cumque temporibus deserunt dolorum, similique,
+                                    porro ad
+                                    expedita
+                                    voluptates maiores, corporis libero?
+                                </p>
+
+                            </div>
+                            <div class="slide slide2" style="background-color: lightgray; padding: 20px;">
+                                <p style="text-align: left;">
+                                    Apple ipsum dolor sit amet consectetur, adipisicing elit. Doloribus tempora
+                                    inventore nam itaque
+                                    esse tenetur
+                                    excepturi illo alias cumque temporibus deserunt dolorum, similique, porro ad
+                                    expedita voluptates
+                                    maiores, corporis
+                                    libero?
+                                </p>
+
+                            </div>
+                            <div class="slide slide3" style="background-color: lightgray; padding: 20px;">
+                                <p style="text-align: left;">
+                                    Puppies ipsum dolor sit amet consectetur, adipisicing elit. Doloribus tempora
+                                    inventore nam
+                                    itaque
+                                    esse tenetur
+                                    excepturi illo alias cumque temporibus deserunt dolorum, similique, porro ad
+                                    expedita voluptates
+                                    maiores, corporis
+                                    libero?
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+
                     <!-- Footer information: Always include an unsubscribe link! -->
                     <tr>
                         <td colspan="3">
