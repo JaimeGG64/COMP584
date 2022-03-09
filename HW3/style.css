@@ -30,6 +30,15 @@ div img {
     max-width: 225px;
 }
 
+.card {
+    padding: 0.75rem;
+}
+
+.card__img {
+    max-height: 10rem;
+    width: unset;
+}
+
 /* grid system -- mobile first! */
 /* flex contatiner */
 
@@ -61,6 +70,10 @@ div img {
     .col-2 {
         flex: 0 0 44%;
     }
+
+    .col-4--tb {
+        flex: 0 0 85%;
+    }
 }
 /* Desktop screen Sizes */
 @media only screen and (min-width: 768px) {
@@ -70,5 +83,13 @@ div img {
 
     .col-2 {
         flex: 0 0 44%;
+    }
+
+    .col-3 {
+        flex: 0 0 60%;
+    }
+
+    .col-4 {
+        flex: 0 0 80%;
     }
 }
