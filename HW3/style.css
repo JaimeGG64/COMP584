@@ -2,6 +2,9 @@
 https://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
 html {
     box-sizing: border-box;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.575) 39.49%, rgba(0, 0, 0, 0) 100%),
+        url("https://i.pinimg.com/originals/68/8e/44/688e447b12909607c988197eb8e2e819.jpg");
+    background-attachment: fixed;
 }
 /* inherit border-box on all elements in the universe and before and after
  */
@@ -12,17 +15,27 @@ html {
 }
 
 body {
-    font-family: Arial, Geneva, sans-serif;
+    font-family: "Trebuchet MS", sans-serif;
 }
 a {
     color: #2772b0;
 }
+
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap");
+
+h1 {
+    color: #ffe01b;
+    font-family: "Alfa Slab One", Rockwell, cursive;
+    text-shadow: 2px 2px #4a4a4a;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
 .wrapper {
     width: 97%;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 3rem auto;
     float: none;
-    background-color: #fff;
 }
 
 div img {
@@ -32,11 +45,27 @@ div img {
 
 .card {
     padding: 0.75rem;
+    margin: 1rem 0;
+    border: 2px #00483a solid;
+    background: #fff;
 }
 
 .card__img {
-    max-height: 10rem;
+    max-height: 7.5rem;
     width: unset;
+}
+
+.card__name {
+    font-weight: bold;
+    margin-bottom: -0.8rem;
+    color: #00483a;
+}
+
+.card__info {
+    font-weight: 300;
+    line-height: 23px;
+    letter-spacing: 0.01em;
+    color: #4a4a4a;
 }
 
 /* grid system -- mobile first! */
@@ -56,13 +85,21 @@ div img {
 
 /* Add background colors to see how much space each column is taking */
 
-.col-1 {
+/* .col-1 {
     background-color: #a3cdd9;
 }
 
 .col-2 {
     background-color: #fffce6;
 }
+
+.col-3 {
+    background-color: bisque;
+}
+
+.col-4 {
+    background-color: lightcoral;
+} */
 
 /* Tablet Landscape Screen Sizes */
 @media only screen and (min-width: 480px) {
@@ -71,8 +108,12 @@ div img {
         flex: 0 0 44%;
     }
 
+    .col-2--tb {
+        flex: 0 0 44%;
+    }
+
     .col-4--tb {
-        flex: 0 0 85%;
+        flex: 0 0 92%;
     }
 }
 /* Desktop screen Sizes */
@@ -86,10 +127,10 @@ div img {
     }
 
     .col-3 {
-        flex: 0 0 60%;
+        flex: 0 0 68%;
     }
 
     .col-4 {
-        flex: 0 0 80%;
+        flex: 0 0 92%;
     }
 }
