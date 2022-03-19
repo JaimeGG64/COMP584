@@ -1,0 +1,86 @@
+html {
+    box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+body {
+    padding: 0;
+    margin: 0;
+}
+.wrapper {
+    width: 400px;
+    margin: auto;
+}
+
+.calculator-screen {
+    font-family: "Courier New", Courier, monospace;
+    font-weight: bold;
+    text-align: right;
+}
+
+.calculator-buttons {
+    display: grid;
+    grid-template-areas:
+        "clear clear backspace divide"
+        "seven eight nine times"
+        "four five six minus"
+        "one two three plus"
+        "zero zero zero equals";
+    gap: 0.1rem;
+}
+
+/*Button Positions*/
+.calculator-buttons__btn-times {
+    grid-area: times;
+}
+.calculator-buttons__btn-divide {
+    grid-area: divide;
+}
+.calculator-buttons__btn-minus {
+    grid-area: minus;
+}
+.calculator-buttons__btn-plus {
+    grid-area: plus;
+}
+.calculator-buttons__btn-equal {
+    grid-area: equal;
+}
+.calculator-buttons__btn-clear {
+    grid-area: clear;
+}
+.calculator-buttons__btn-backspace {
+    grid-area: backspace;
+}
+.calculator-buttons__btn-nine {
+    grid-area: nine;
+}
+.calculator-buttons__btn-eight {
+    grid-area: eight;
+}
+.calculator-buttons__btn-seven {
+    grid-area: seven;
+}
+.calculator-buttons__btn-six {
+    grid-area: six;
+}
+.calculator-buttons__btn-five {
+    grid-area: five;
+}
+.calculator-buttons__btn-four {
+    grid-area: four;
+}
+.calculator-buttons__btn-three {
+    grid-area: three;
+}
+.calculator-buttons__btn-two {
+    grid-area: two;
+}
+.calculator-buttons__btn-one {
+    grid-area: one;
+}
+.calculator-buttons__btn-zero {
+    grid-area: zero;
+}
