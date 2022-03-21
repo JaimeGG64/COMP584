@@ -14,14 +14,18 @@ document.querySelector('.calculator-buttons').addEventListener('click', (event) 
             printScreenState();
         }
         else if (getBtnValue === '=') {
-            let getResult = add(3, 4);
-            let getOperatorPositions = numberStack.findIndex(operator => operator === "+");
+            let getResult;
+            let getOperatorPositions = numberStack.findIndex(
+                operator =>
+                    operator === "÷" || operator === "×" || operator === "+" || operator === "−");
             let leftEqu = numberStack;
             let rightEqu = numberStack;
             let getInt1 = parseInt(leftEqu.slice(0, getOperatorPositions).join(''));
             let getInt2 = parseInt(rightEqu.slice(getOperatorPositions + 1).join(''));
-            console.log(`${getInt1} + ${getInt2}`);
-            getResult = add(getInt1, getInt2);
+            numberStack[getOperatorPositions] === "÷" ? getResult = divide(getInt1, getInt2) : getResult;
+            numberStack[getOperatorPositions] === "×" ? getResult = multi(getInt1, getInt2) : getResult;
+            numberStack[getOperatorPositions] === "+" ? getResult = add(getInt1, getInt2) : getResult;
+            numberStack[getOperatorPositions] === "−" ? getResult = sub(getInt1, getInt2) : getResult;
             numberStack = [`${getResult}`];
             printScreenState();
         }
@@ -33,7 +37,7 @@ document.querySelector('.calculator-buttons').addEventListener('click', (event) 
 })
 
 function printScreenState() {
-    getTextOutput.innerText = `${numberStack}`;
+    getTextOutput.innerText = `${numberStack.join('')}`;
 }
 
 let add = (val1, val2) => {
