@@ -1,5 +1,6 @@
 html {
     box-sizing: border-box;
+    font-family: Verdana, Arial, sans-serif;
 }
 *,
 *:before,
@@ -16,13 +17,16 @@ body {
 }
 
 .calculator-screen {
-    font-family: "Courier New", Courier, monospace;
-    font-weight: bold;
     text-align: right;
+    font-size: 2rem;
+    background-color: black;
+    padding: 1.25rem 0.5rem;
+    color: white;
 }
 
 .calculator-buttons {
     display: grid;
+    grid-template-columns: repeat(4, 1fr);
     grid-template-areas:
         "clear clear backspace divide"
         "seven eight nine times"
@@ -30,6 +34,29 @@ body {
         "one two three plus"
         "zero zero zero equals";
     gap: 0.1rem;
+    background-color: black;
+}
+
+.calculator-buttons button {
+    height: 6rem;
+    font-size: 2rem;
+    border-radius: 0%;
+    border: none;
+}
+
+/* Equation Btn Styles */
+.calculator-buttons__equations-style {
+    background: #df974c;
+    color: white;
+    font-weight: bold;
+}
+
+.calculator-buttons__equations-style:hover {
+    background-color: #c98944;
+}
+
+.calculator-buttons__equations-style:active {
+    background-color: #ac763c;
 }
 
 /*Button Positions*/
@@ -45,8 +72,8 @@ body {
 .calculator-buttons__btn-plus {
     grid-area: plus;
 }
-.calculator-buttons__btn-equal {
-    grid-area: equal;
+.calculator-buttons__btn-equals {
+    grid-area: equals;
 }
 .calculator-buttons__btn-clear {
     grid-area: clear;

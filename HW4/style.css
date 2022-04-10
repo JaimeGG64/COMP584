@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap");
+/* Border box declaration 
+https://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+html {
+    box-sizing: border-box;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.575) 39.49%, rgba(0, 0, 0, 0) 100%),
+        url("https://i.pinimg.com/originals/68/8e/44/688e447b12909607c988197eb8e2e819.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+}
+/* inherit border-box on all elements in the universe and before and after
+ */
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "Trebuchet MS", sans-serif;
+}
+a {
+    color: #2772b0;
+}
+
+a:hover {
+    color: #af65a9;
+}
+
+a:focus {
+    color: #00483a;
+}
+
+h1 {
+    color: #ffe01b;
+    font-family: "Alfa Slab One", Rockwell, serif;
+    text-shadow: 2px 2px #4a4a4a;
+    font-weight: 400;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.wrapper {
+    width: 97%;
+    max-width: 1200px;
+    margin: 3rem auto;
+    float: none;
+}
+
+div img {
+    width: 100%;
+    max-width: 225px;
+}
+
+.card {
+    display: grid;
+    grid-auto-rows: minmax(min-content, max-content);
+    grid-template-areas:
+        "image"
+        "name"
+        "info";
+    padding: 0.75rem;
+    border: 2px #00483a solid;
+    background: #fff;
+}
+
+.card__img {
+    grid-area: image;
+    max-height: 7.5rem;
+    width: unset;
+    transition: all 0.2s ease-in-out;
+}
+
+.card__img:hover {
+    transform: translateY(-20%);
+}
+
+.card__name {
+    grid-area: name;
+    font-weight: bold;
+    margin-top: 0.5rem;
+    margin-bottom: -0.8rem;
+    color: #00483a;
+}
+
+.card__info {
+    grid-area: info;
+    font-weight: 300;
+    line-height: 23px;
+    letter-spacing: 0.01em;
+    color: #4a4a4a;
+    margin-bottom: 0;
+}
+
+/* grid system -- mobile first! */
+/* grid container */
+
+.grid-wrapper {
+    display: grid;
+    gap: 1rem;
+}
+
+/* Tablet Landscape Screen Sizes */
+@media only screen and (min-width: 480px) {
+    .grid-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card--span-1-md {
+        grid-column: span 1;
+    }
+
+    .card--span-2-md {
+        grid-column: span 2;
+    }
+}
+/* Desktop screen Sizes */
+@media only screen and (min-width: 768px) {
+    .grid-wrapper {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .card--span-1-lg {
+        grid-area: span 1;
+    }
+
+    .card--span-2-lg {
+        grid-column: span 2;
+    }
+
+    .card--span-3-lg {
+        grid-column: span 3;
+    }
+
+    .card--span-4-lg {
+        grid-column: span 4;
+    }
+}
