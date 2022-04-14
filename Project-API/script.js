@@ -26,19 +26,14 @@ const queryCollection = [
     }
 ];
 
-var templateFacts = '';
-
 queryCollection.forEach((element) => {
-    const promise = fetch(`https://api.chucknorris.io/jokes/random?category=${element.category
-        }`);
+    const promise = fetch(`https://api.chucknorris.io/jokes/random?category=${element.category}`);
     promise
         .then(function (response) {
-            // console.log("OG Response from API", response);
             const processingPromise = response.json();
             return processingPromise;
         })
         .then(function (processedResponse) {
-            // console.log("Response after .json()", processedResponse)
             let getContainer = document.querySelector(".cn-facts-wrapper")
             getContainer.innerHTML += `
             <div class="fact-box">

@@ -29,7 +29,9 @@ main{
     font-weight: bold;
     margin: 0;
     padding: 2rem 1rem;
-
+    font-family: rosewood-std, Times, sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .cn-facts-wrapper{
@@ -45,7 +47,10 @@ main{
     background-color: #F2ECBA;
     font-family: 'Times New Roman', Times, serif;
     padding: 2.5rem 2rem;
-
+    /*
+    Clip Path Comes from
+    https: //codepen.io/carterpape/pen/rNjJKbM
+    */
     clip-path: polygon(1% 2%,
         3.5% 0.1%,
         8.9% 2.7%,

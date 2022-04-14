@@ -7,22 +7,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/obo3pdz.css">
     <title>Chuck Norris Facts</title>
 </head>
 
 <body>
     <main class="main">
         <h1 class="main__heading">Chuck Norris Facts</h1>
-        <!-- <p class="main__copy">Chuck Norris with find who responsible for breaking the API</p> -->
         <section class="cn-facts-wrapper">
 
         </section>
     </main>
     <footer class="footer">
-        <p>Design and Coded by Jaime Garcia</p>
+        <p>Design and Coded by Jaime García</p>
         <p>Jokes Provided by Chuck Norris API</p>
     </footer>
     <script src="https://unpkg.com/popmotion@8.1.24/dist/popmotion.global.min.js"></script>
+    <script>
+        const element = document.querySelector('.ball');
+        tween({ to: 300, duration: 500 })
+            .start((v) => element.style += 'translateX(' + v + 'px)');
+    </script>
     <script src="script.js"></script>
 </body>
 
